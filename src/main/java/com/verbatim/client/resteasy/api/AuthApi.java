@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class AuthApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class AuthApi {
 
   /**
    * Create an access token
-   * Generate a new short-lived opaque access token for the caller&#39;s organization. The token can be used as the &#x60;X-Access-Token&#x60; header on &#x60;/v1/&#x60; API calls. Default TTL is 3600 seconds (1 hour).By default, token inherit privileges over all the domains. To limit access, defined a list of scope, where each must be compliant with the regex (config|auth|session|doc|corpus|post|usage):(create|read|update|delete)
+   * Generate a new short-lived opaque access token for the caller&#39;s organization. The token can be used as the &#x60;X-Access-Token&#x60; header on &#x60;/v1/&#x60; API calls. Default TTL is 3600 seconds (1 hour).By default, token inherit privileges over all the domains. To limit access, defined a list of scope, where each must be compliant with the regex (config|auth|session|doc|corpus|post|usage|agent):(create|read|update|delete)
    * @param accessTokenCreateRequest  (required)
    * @return a {@code AccessTokenCreateResponse}
    * @throws ApiException if fails to make API call

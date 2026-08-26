@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class ConfigurationApi {
   private ApiClient apiClient;
 
@@ -41,7 +41,7 @@ public class ConfigurationApi {
    * @return a {@code ModelListResponse}
    * @throws ApiException if fails to make API call
    */
-  public ModelListResponse list4() throws ApiException {
+  public ModelListResponse list5() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables

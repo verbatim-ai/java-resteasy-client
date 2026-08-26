@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class SessionApi {
   private ApiClient apiClient;
 
@@ -181,12 +181,12 @@ public class SessionApi {
    * @return a {@code SessionListResponse}
    * @throws ApiException if fails to make API call
    */
-  public SessionListResponse list1(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public SessionListResponse list2(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list1");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list2");
     }
     
     // create path and map variables

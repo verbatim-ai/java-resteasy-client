@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.25.0")
 public class PostApi {
   private ApiClient apiClient;
 
@@ -93,12 +93,12 @@ public class PostApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete3(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public AckResponse delete4(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete3");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete4");
     }
     
     // create path and map variables
@@ -181,12 +181,12 @@ public class PostApi {
    * @return a {@code Post}
    * @throws ApiException if fails to make API call
    */
-  public Post get3(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public Post get4(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling get3");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling get4");
     }
     
     // create path and map variables
@@ -227,12 +227,12 @@ public class PostApi {
    * @return a {@code PostListResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostListResponse list2(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public PostListResponse list3(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
     if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling list2");
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling list3");
     }
     
     // create path and map variables
@@ -268,18 +268,23 @@ public class PostApi {
       }
   /**
    * Get presigned preview URLs
-   * Return time-limited presigned URLs for the rendered preview images of the document. One entry is issued per (page, size): by default the first 4 pages × {SMALL, MEDIUM}, so up to 8 entries per call.  Pass &#x60;pages&#x60; to restrict the response to specific page indices (e.g. &#x60;pages&#x3D;0&amp;pages&#x3D;2&#x60;). When omitted, pages 0–3 are used. Duplicate values are preserved as supplied.  The URLs point at preview images produced asynchronously by the rendering pipeline. No existence check is performed — individual URLs MAY return 404 when fetched if the corresponding (page, size) hasn&#39;t been generated yet; clients SHOULD fall back per-tile. 
+   * Return time-limited presigned URLs for the rendered preview images of the document.  &#x60;pages&#x60; is **required** and selects the zero-based page indices to issue URLs for: at least one, at most 10 per request — &#x60;400&#x60; otherwise. Repeat the parameter for several values (&#x60;pages&#x3D;0&amp;pages&#x3D;2&#x60;) or send them comma-separated (&#x60;pages&#x3D;0,2&#x60;). Duplicates are preserved as supplied and count towards the limit. Paginate over a long document with several calls rather than asking for every page at once.  Every index must address a page of *that* document: negatives are rejected, and so is anything at or past its page count once that count is known (&#x60;nbPages&#x60; from &#x60;GET /v1/doc/{id}&#x60;, &#x60;0&#x60; while the rendering pipeline has not reported it).  One entry is issued per (page, size) over {SMALL, MEDIUM}, so a call returns &#x60;2 × pages&#x60; entries — at most 20.  The URLs point at preview images produced asynchronously by the rendering pipeline. No existence check is performed — individual URLs MAY return 404 when fetched if the corresponding (page, size) hasn&#39;t been generated yet; clients SHOULD fall back per-tile. 
    * @param docId ID of the document. (required)
-   * @param pages Page indices to include. When omitted, pages 0–3 are returned. Repeat for multiple values: &#x60;pages&#x3D;0&amp;pages&#x3D;2&#x60;. (optional)
+   * @param pages Zero-based page indices to issue preview URLs for. Required: 1 to 10 values per request, each within the document&#39;s page range. Repeat for multiple values: &#x60;pages&#x3D;0&amp;pages&#x3D;2&#x60;. (required)
    * @return a {@code DocumentPreviewUrls}
    * @throws ApiException if fails to make API call
    */
-  public DocumentPreviewUrls previewUrls(@javax.annotation.Nonnull UUID docId, @javax.annotation.Nullable List<Integer> pages) throws ApiException {
+  public DocumentPreviewUrls previewUrls(@javax.annotation.Nonnull UUID docId, @javax.annotation.Nonnull List<Integer> pages) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'docId' is set
     if (docId == null) {
       throw new ApiException(400, "Missing the required parameter 'docId' when calling previewUrls");
+    }
+    
+    // verify the required parameter 'pages' is set
+    if (pages == null) {
+      throw new ApiException(400, "Missing the required parameter 'pages' when calling previewUrls");
     }
     
     // create path and map variables
@@ -314,14 +319,15 @@ public class PostApi {
       }
   /**
    * Send a query
-   * Submit a user message to a session and run the full RAG pipeline:  1. Persist the query as a post with &#x60;owner &#x3D; USER&#x60;. 2. Vectorize the query and run a cosine-similarity search against the session&#39;s corpora. 3. Feed the top chunks to the session&#39;s LLM as context. 4. Persist the answer as a post with &#x60;owner &#x3D; SYSTEM&#x60;, with attachments pointing to the chunks used.  The response contains both the user post (&#x60;query&#x60;) and the system post (&#x60;answer&#x60;). 
+   * Submit a user message to a session and run the full RAG pipeline:  1. Persist the query as a post with &#x60;owner &#x3D; USER&#x60;. 2. Vectorize the query and run a cosine-similarity search against the session&#39;s corpora. 3. Feed the top chunks to the session&#39;s LLM as context. 4. Persist the answer as a post with &#x60;owner &#x3D; SYSTEM&#x60;, with attachments pointing to the chunks used.  The response contains both the user post (&#x60;query&#x60;) and the system post (&#x60;answer&#x60;).  ### Choosing an agent  How much of that pipeline runs, and how, is decided by an **agent** — retrieval width, whether the chunks are re-ranked, the system instruction, how much of the conversation is replayed, and which model answers. See &#x60;GET /v1/agent/&#x60;.  Omit &#x60;agentId&#x60; and the query runs on the platform default agent, which is what every query did before agents existed. Pass one to run this single query under a different setup:  &#x60;&#x60;&#x60; GET /v1/post/q?sessionId&#x3D;$SESSION_ID&amp;body&#x3D;What+is+the+refund+policy%3F&amp;agentId&#x3D;$AGENT_ID &#x60;&#x60;&#x60;  The choice is **per query, not per session** — the next query on the same session is independent, so a client can escalate one question to a wider, slower agent without changing the conversation it belongs to.  The agent is then recorded on the answer as &#x60;agentId&#x60;, and only on the answer: the user&#39;s question is not something an agent produced. A missing &#x60;agentId&#x60; on an answer therefore means \&quot;ran on the default agent\&quot;, not \&quot;unknown\&quot;. Deleting an agent does not rewrite the answers it produced, so this still names an agent you have since deleted — resolving that id through &#x60;GET /v1/agent/{agentId}&#x60; answers &#x60;404&#x60;, which is the honest reading.  An &#x60;agentId&#x60; your organization cannot see — someone else&#39;s, or one that never existed — answers &#x60;404&#x60; and no post is written. 
    * @param sessionId ID of the session to post the query into. (required)
    * @param body User message to send to the LLM. (required)
    * @param lang ISO-639 language code used by the LLM. Defaults to &#x60;en&#x60;. (optional)
+   * @param agentId Agent to run this query under. Omit to use the platform default agent. Must be one of the agents &#x60;GET /v1/agent/&#x60; lists for your organization. (optional)
    * @return a {@code PostItemResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostItemResponse query(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang) throws ApiException {
+  public PostItemResponse query(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
@@ -346,6 +352,7 @@ public class PostApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "body", body));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "lang", lang));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "agentId", agentId));
 
     
     
