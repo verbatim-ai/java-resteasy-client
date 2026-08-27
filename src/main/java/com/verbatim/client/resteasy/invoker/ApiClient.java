@@ -64,7 +64,7 @@ import com.verbatim.client.resteasy.invoker.auth.ApiKeyAuth;
 public class ApiClient extends JavaTimeFormatter {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   protected Map<String, String> defaultCookieMap = new HashMap<String, String>();
-  protected String basePath = "http://localhost:8080";
+  protected String basePath = "https://api.verbatim-ai.com";
   protected boolean debugging = false;
 
   protected Client httpClient;
