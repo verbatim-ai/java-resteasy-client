@@ -41,7 +41,7 @@ public class ConfigurationApi {
    * @return a {@code ModelListResponse}
    * @throws ApiException if fails to make API call
    */
-  public ModelListResponse list5() throws ApiException {
+  public ModelListResponse list6() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
