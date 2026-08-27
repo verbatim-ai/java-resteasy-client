@@ -91,12 +91,12 @@ public class SessionApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete2(@javax.annotation.Nonnull UUID sessionId) throws ApiException {
+  public AckResponse delete(@javax.annotation.Nonnull UUID sessionId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
     if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling delete2");
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling delete");
     }
     
     // create path and map variables
@@ -135,12 +135,12 @@ public class SessionApi {
    * @return a {@code Session}
    * @throws ApiException if fails to make API call
    */
-  public Session get2(@javax.annotation.Nonnull UUID sessionId) throws ApiException {
+  public Session get(@javax.annotation.Nonnull UUID sessionId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
     if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling get2");
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling get");
     }
     
     // create path and map variables
@@ -181,12 +181,12 @@ public class SessionApi {
    * @return a {@code SessionListResponse}
    * @throws ApiException if fails to make API call
    */
-  public SessionListResponse list4(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public SessionListResponse list2(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list4");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list2");
     }
     
     // create path and map variables
@@ -366,17 +366,17 @@ public class SessionApi {
    * @return a {@code Session}
    * @throws ApiException if fails to make API call
    */
-  public Session update2(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull SessionUpdateRequest sessionUpdateRequest) throws ApiException {
+  public Session update(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull SessionUpdateRequest sessionUpdateRequest) throws ApiException {
     Object localVarPostBody = sessionUpdateRequest;
     
     // verify the required parameter 'sessionId' is set
     if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling update2");
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling update");
     }
     
     // verify the required parameter 'sessionUpdateRequest' is set
     if (sessionUpdateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionUpdateRequest' when calling update2");
+      throw new ApiException(400, "Missing the required parameter 'sessionUpdateRequest' when calling update");
     }
     
     // create path and map variables

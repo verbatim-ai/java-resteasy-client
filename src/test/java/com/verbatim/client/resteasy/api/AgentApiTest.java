@@ -65,11 +65,11 @@ class AgentApiTest {
      *          if the Api call fails
      */
     @Test
-    void delete4Test() throws ApiException {
+    void delete3Test() throws ApiException {
         //
         //UUID agentId = null;
         //
-        //AckResponse response = api.delete4(agentId);
+        //AckResponse response = api.delete3(agentId);
 
         // TODO: test validations
     }
@@ -82,11 +82,11 @@ class AgentApiTest {
      *          if the Api call fails
      */
     @Test
-    void get4Test() throws ApiException {
+    void get3Test() throws ApiException {
         //
         //UUID agentId = null;
         //
-        //Agent response = api.get4(agentId);
+        //Agent response = api.get3(agentId);
 
         // TODO: test validations
     }
@@ -99,13 +99,13 @@ class AgentApiTest {
      *          if the Api call fails
      */
     @Test
-    void list2Test() throws ApiException {
+    void list1Test() throws ApiException {
         //
         //Integer pageSize = null;
         //
         //Integer pageIndex = null;
         //
-        //AgentListResponse response = api.list2(pageSize, pageIndex);
+        //AgentListResponse response = api.list1(pageSize, pageIndex);
 
         // TODO: test validations
     }
@@ -118,13 +118,13 @@ class AgentApiTest {
      *          if the Api call fails
      */
     @Test
-    void update4Test() throws ApiException {
+    void update3Test() throws ApiException {
         //
         //UUID agentId = null;
         //
         //AgentUpdateRequest agentUpdateRequest = null;
         //
-        //Agent response = api.update4(agentId, agentUpdateRequest);
+        //Agent response = api.update3(agentId, agentUpdateRequest);
 
         // TODO: test validations
     }

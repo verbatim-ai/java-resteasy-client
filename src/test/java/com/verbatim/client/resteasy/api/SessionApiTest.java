@@ -66,11 +66,11 @@ class SessionApiTest {
      *          if the Api call fails
      */
     @Test
-    void delete2Test() throws ApiException {
+    void deleteTest() throws ApiException {
         //
         //UUID sessionId = null;
         //
-        //AckResponse response = api.delete2(sessionId);
+        //AckResponse response = api.delete(sessionId);
 
         // TODO: test validations
     }
@@ -83,11 +83,11 @@ class SessionApiTest {
      *          if the Api call fails
      */
     @Test
-    void get2Test() throws ApiException {
+    void getTest() throws ApiException {
         //
         //UUID sessionId = null;
         //
-        //Session response = api.get2(sessionId);
+        //Session response = api.get(sessionId);
 
         // TODO: test validations
     }
@@ -100,7 +100,7 @@ class SessionApiTest {
      *          if the Api call fails
      */
     @Test
-    void list4Test() throws ApiException {
+    void list2Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
@@ -108,7 +108,7 @@ class SessionApiTest {
         //
         //Integer pageIndex = null;
         //
-        //SessionListResponse response = api.list4(corpusId, pageSize, pageIndex);
+        //SessionListResponse response = api.list2(corpusId, pageSize, pageIndex);
 
         // TODO: test validations
     }
@@ -188,13 +188,13 @@ class SessionApiTest {
      *          if the Api call fails
      */
     @Test
-    void update2Test() throws ApiException {
+    void updateTest() throws ApiException {
         //
         //UUID sessionId = null;
         //
         //SessionUpdateRequest sessionUpdateRequest = null;
         //
-        //Session response = api.update2(sessionId, sessionUpdateRequest);
+        //Session response = api.update(sessionId, sessionUpdateRequest);
 
         // TODO: test validations
     }

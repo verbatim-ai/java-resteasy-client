@@ -49,12 +49,12 @@ public class PostApi {
    * @return a {@code PostAttachmentResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostAttachmentResponse attachment1(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public PostAttachmentResponse attachment(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling attachment1");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling attachment");
     }
     
     // create path and map variables
@@ -87,66 +87,18 @@ public class PostApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
-   * List posts
-   * Paginate every post (user queries and system answers) in a session, newest first.
-   * @param sessionId ID of the session. (required)
-   * @param pageSize Number of items per page. (optional, default to 25)
-   * @param pageIndex Zero-based page index. (optional, default to 0)
-   * @return a {@code PostListResponse}
-   * @throws ApiException if fails to make API call
-   */
-  public PostListResponse callList(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'sessionId' is set
-    if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling callList");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v1/post/".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
-
-    GenericType<PostListResponse> localVarReturnType = new GenericType<PostListResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
    * Delete a post
    * Permanently delete a post and its attachments. Documents and embeddings referenced by the attachments are **not** affected.
    * @param postId ID of the post to delete. (required)
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete5(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public AckResponse delete4(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete5");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete4");
     }
     
     // create path and map variables
@@ -229,12 +181,12 @@ public class PostApi {
    * @return a {@code Post}
    * @throws ApiException if fails to make API call
    */
-  public Post get5(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public Post get4(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling get5");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling get4");
     }
     
     // create path and map variables
@@ -264,6 +216,54 @@ public class PostApi {
     String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
 
     GenericType<Post> localVarReturnType = new GenericType<Post>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * List posts
+   * Paginate every post (user queries and system answers) in a session, newest first.
+   * @param sessionId ID of the session. (required)
+   * @param pageSize Number of items per page. (optional, default to 25)
+   * @param pageIndex Zero-based page index. (optional, default to 0)
+   * @return a {@code PostListResponse}
+   * @throws ApiException if fails to make API call
+   */
+  public PostListResponse list3(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'sessionId' is set
+    if (sessionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling list3");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v1/post/".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
+
+    GenericType<PostListResponse> localVarReturnType = new GenericType<PostListResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
@@ -327,17 +327,17 @@ public class PostApi {
    * @return a {@code PostItemResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostItemResponse query1(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
+  public PostItemResponse query(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
     if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling query1");
+      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling query");
     }
     
     // verify the required parameter 'body' is set
     if (body == null) {
-      throw new ApiException(400, "Missing the required parameter 'body' when calling query1");
+      throw new ApiException(400, "Missing the required parameter 'body' when calling query");
     }
     
     // create path and map variables
@@ -371,62 +371,5 @@ public class PostApi {
 
     GenericType<PostItemResponse> localVarReturnType = new GenericType<PostItemResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
-   * DEPRECATED. use GET /v1/post/q instead. Send a query
-   * DEPRECATED. use GET /v1/post instead. Submit a user message to a session and run the full RAG pipeline:  1. Persist the query as a post with &#x60;owner &#x3D; USER&#x60;. 2. Vectorize the query and run a cosine-similarity search against the session&#39;s corpora. 3. Feed the top chunks to the session&#39;s LLM as context. 4. Persist the answer as a post with &#x60;owner &#x3D; SYSTEM&#x60;, with attachments pointing to the chunks used.  The response contains both the user post (&#x60;query&#x60;) and the system post (&#x60;answer&#x60;). 
-   * @param sessionId ID of the session to post the query into. (required)
-   * @param body User message to send to the LLM. (required)
-   * @param lang ISO-639 language code used by the LLM. Defaults to &#x60;en&#x60;. (optional)
-   * @param agentId Agent to run this query under. Omit to use the platform default agent. Must be one of the agents &#x60;GET /v1/agent/&#x60; lists for your organization. (optional)
-   * @return a {@code PostItemResponse}
-   * @throws ApiException if fails to make API call
-   * @deprecated
-   */
-  @Deprecated
-  public PostItemResponse queryPostLegacy(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'sessionId' is set
-    if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling queryPostLegacy");
-    }
-    
-    // verify the required parameter 'body' is set
-    if (body == null) {
-      throw new ApiException(400, "Missing the required parameter 'body' when calling queryPostLegacy");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v1/post/".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "body", body));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "lang", lang));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "agentId", agentId));
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
-
-    GenericType<PostItemResponse> localVarReturnType = new GenericType<PostItemResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 }

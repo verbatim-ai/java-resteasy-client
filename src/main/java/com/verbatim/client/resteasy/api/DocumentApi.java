@@ -97,12 +97,12 @@ public class DocumentApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete3(@javax.annotation.Nonnull UUID id) throws ApiException {
+  public AckResponse delete1(@javax.annotation.Nonnull UUID id) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling delete3");
+      throw new ApiException(400, "Missing the required parameter 'id' when calling delete1");
     }
     
     // create path and map variables
@@ -185,12 +185,12 @@ public class DocumentApi {
    * @return a {@code Document}
    * @throws ApiException if fails to make API call
    */
-  public Document get3(@javax.annotation.Nonnull UUID id) throws ApiException {
+  public Document get1(@javax.annotation.Nonnull UUID id) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling get3");
+      throw new ApiException(400, "Missing the required parameter 'id' when calling get1");
     }
     
     // create path and map variables
@@ -276,12 +276,12 @@ public class DocumentApi {
    * @return a {@code DocumentListResponse}
    * @throws ApiException if fails to make API call
    */
-  public DocumentListResponse list5(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String status, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public DocumentListResponse list4(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String status, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list5");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list4");
     }
     
     // create path and map variables
@@ -619,17 +619,17 @@ public class DocumentApi {
    * @return a {@code Document}
    * @throws ApiException if fails to make API call
    */
-  public Document update3(@javax.annotation.Nonnull UUID id, @javax.annotation.Nonnull DocumentUpdateRequest documentUpdateRequest) throws ApiException {
+  public Document update1(@javax.annotation.Nonnull UUID id, @javax.annotation.Nonnull DocumentUpdateRequest documentUpdateRequest) throws ApiException {
     Object localVarPostBody = documentUpdateRequest;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling update3");
+      throw new ApiException(400, "Missing the required parameter 'id' when calling update1");
     }
     
     // verify the required parameter 'documentUpdateRequest' is set
     if (documentUpdateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'documentUpdateRequest' when calling update3");
+      throw new ApiException(400, "Missing the required parameter 'documentUpdateRequest' when calling update1");
     }
     
     // create path and map variables

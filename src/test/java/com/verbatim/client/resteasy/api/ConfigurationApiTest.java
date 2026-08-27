@@ -43,9 +43,9 @@ class ConfigurationApiTest {
      *          if the Api call fails
      */
     @Test
-    void list6Test() throws ApiException {
+    void list5Test() throws ApiException {
         //
-        //ModelListResponse response = api.list6();
+        //ModelListResponse response = api.list5();
 
         // TODO: test validations
     }
