@@ -24,6 +24,7 @@ import com.verbatim.client.resteasy.models.Attachment;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -38,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PostAttachmentResponse {
   public static final String JSON_PROPERTY_POST_ID = "postId";
   @javax.annotation.Nonnull
-  private String postId;
+  private UUID postId;
 
   public static final String JSON_PROPERTY_ITEMS = "items";
   @javax.annotation.Nonnull
@@ -47,7 +48,7 @@ public class PostAttachmentResponse {
   public PostAttachmentResponse() {
   }
 
-  public PostAttachmentResponse postId(@javax.annotation.Nonnull String postId) {
+  public PostAttachmentResponse postId(@javax.annotation.Nonnull UUID postId) {
     
     this.postId = postId;
     return this;
@@ -61,14 +62,14 @@ public class PostAttachmentResponse {
   @JsonProperty(value = JSON_PROPERTY_POST_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public String getPostId() {
+  public UUID getPostId() {
     return postId;
   }
 
 
   @JsonProperty(value = JSON_PROPERTY_POST_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setPostId(@javax.annotation.Nonnull String postId) {
+  public void setPostId(@javax.annotation.Nonnull UUID postId) {
     this.postId = postId;
   }
 

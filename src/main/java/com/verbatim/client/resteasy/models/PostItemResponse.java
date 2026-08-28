@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.verbatim.client.resteasy.models.Post;
+import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -36,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PostItemResponse {
   public static final String JSON_PROPERTY_SESSION_ID = "sessionId";
   @javax.annotation.Nonnull
-  private String sessionId;
+  private UUID sessionId;
 
   public static final String JSON_PROPERTY_QUERY = "query";
   @javax.annotation.Nullable
@@ -49,7 +50,7 @@ public class PostItemResponse {
   public PostItemResponse() {
   }
 
-  public PostItemResponse sessionId(@javax.annotation.Nonnull String sessionId) {
+  public PostItemResponse sessionId(@javax.annotation.Nonnull UUID sessionId) {
     
     this.sessionId = sessionId;
     return this;
@@ -63,14 +64,14 @@ public class PostItemResponse {
   @JsonProperty(value = JSON_PROPERTY_SESSION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public String getSessionId() {
+  public UUID getSessionId() {
     return sessionId;
   }
 
 
   @JsonProperty(value = JSON_PROPERTY_SESSION_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setSessionId(@javax.annotation.Nonnull String sessionId) {
+  public void setSessionId(@javax.annotation.Nonnull UUID sessionId) {
     this.sessionId = sessionId;
   }
 

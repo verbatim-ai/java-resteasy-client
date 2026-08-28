@@ -471,12 +471,12 @@ public class DocumentApi {
    * @return a {@code DocumentSearchResponse}
    * @throws ApiException if fails to make API call
    */
-  public DocumentSearchResponse search(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String q, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable String tagsMatch, @javax.annotation.Nullable List<String> status, @javax.annotation.Nullable List<String> contentType, @javax.annotation.Nullable String lang, @javax.annotation.Nullable String provider, @javax.annotation.Nullable OffsetDateTime createdAfter, @javax.annotation.Nullable OffsetDateTime createdBefore, @javax.annotation.Nullable Long minSize, @javax.annotation.Nullable Long maxSize, @javax.annotation.Nullable String sort, @javax.annotation.Nullable String order, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public DocumentSearchResponse search1(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String q, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable String tagsMatch, @javax.annotation.Nullable List<String> status, @javax.annotation.Nullable List<String> contentType, @javax.annotation.Nullable String lang, @javax.annotation.Nullable String provider, @javax.annotation.Nullable OffsetDateTime createdAfter, @javax.annotation.Nullable OffsetDateTime createdBefore, @javax.annotation.Nullable Long minSize, @javax.annotation.Nullable Long maxSize, @javax.annotation.Nullable String sort, @javax.annotation.Nullable String order, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling search");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling search1");
     }
     
     // create path and map variables

@@ -179,7 +179,7 @@ public class AgentApi {
    * @return a {@code AgentListResponse}
    * @throws ApiException if fails to make API call
    */
-  public AgentListResponse list1(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public AgentListResponse list2(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables

@@ -43,47 +43,6 @@ public class CorpusApi {
   }
 
   /**
-   * List corpora
-   * Paginate corpora belonging to an organization.
-   * @param pageSize Number of items per page. (optional, default to 25)
-   * @param pageIndex Zero-based page index. (optional, default to 0)
-   * @return a {@code CorpusListResponse}
-   * @throws ApiException if fails to make API call
-   */
-  public CorpusListResponse callList(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // create path and map variables
-    String localVarPath = "/v1/corpus/".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
-
-    GenericType<CorpusListResponse> localVarReturnType = new GenericType<CorpusListResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
    * Create a corpus
    * Create a new corpus inside an organization. The embedding model and summary LLM are locked at creation time and used for every document ingested afterwards.
    * @param corpusCreateRequest  (required)
@@ -212,6 +171,47 @@ public class CorpusApi {
     String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
 
     GenericType<CorpusItemResponse> localVarReturnType = new GenericType<CorpusItemResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * List corpora
+   * Paginate corpora belonging to an organization.
+   * @param pageSize Number of items per page. (optional, default to 25)
+   * @param pageIndex Zero-based page index. (optional, default to 0)
+   * @return a {@code CorpusListResponse}
+   * @throws ApiException if fails to make API call
+   */
+  public CorpusListResponse list1(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // create path and map variables
+    String localVarPath = "/v1/corpus/".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
+
+    GenericType<CorpusListResponse> localVarReturnType = new GenericType<CorpusListResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**

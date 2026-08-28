@@ -215,7 +215,7 @@ class DocumentApiTest {
      *          if the Api call fails
      */
     @Test
-    void searchTest() throws ApiException {
+    void search1Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
@@ -249,7 +249,7 @@ class DocumentApiTest {
         //
         //Integer pageIndex = null;
         //
-        //DocumentSearchResponse response = api.search(corpusId, q, tags, tagsMatch, status, contentType, lang, provider, createdAfter, createdBefore, minSize, maxSize, sort, order, pageSize, pageIndex);
+        //DocumentSearchResponse response = api.search1(corpusId, q, tags, tagsMatch, status, contentType, lang, provider, createdAfter, createdBefore, minSize, maxSize, sort, order, pageSize, pageIndex);
 
         // TODO: test validations
     }

@@ -99,13 +99,13 @@ class AgentApiTest {
      *          if the Api call fails
      */
     @Test
-    void list1Test() throws ApiException {
+    void list2Test() throws ApiException {
         //
         //Integer pageSize = null;
         //
         //Integer pageIndex = null;
         //
-        //AgentListResponse response = api.list1(pageSize, pageIndex);
+        //AgentListResponse response = api.list2(pageSize, pageIndex);
 
         // TODO: test validations
     }

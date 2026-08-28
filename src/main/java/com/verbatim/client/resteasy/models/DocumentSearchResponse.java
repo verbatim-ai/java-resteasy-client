@@ -24,6 +24,7 @@ import com.verbatim.client.resteasy.models.Document;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -41,7 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class DocumentSearchResponse {
   public static final String JSON_PROPERTY_CORPUS_ID = "corpusId";
   @javax.annotation.Nonnull
-  private String corpusId;
+  private UUID corpusId;
 
   public static final String JSON_PROPERTY_PAGE_INDEX = "pageIndex";
   @javax.annotation.Nonnull
@@ -62,7 +63,7 @@ public class DocumentSearchResponse {
   public DocumentSearchResponse() {
   }
 
-  public DocumentSearchResponse corpusId(@javax.annotation.Nonnull String corpusId) {
+  public DocumentSearchResponse corpusId(@javax.annotation.Nonnull UUID corpusId) {
     
     this.corpusId = corpusId;
     return this;
@@ -76,14 +77,14 @@ public class DocumentSearchResponse {
   @JsonProperty(value = JSON_PROPERTY_CORPUS_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public String getCorpusId() {
+  public UUID getCorpusId() {
     return corpusId;
   }
 
 
   @JsonProperty(value = JSON_PROPERTY_CORPUS_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setCorpusId(@javax.annotation.Nonnull String corpusId) {
+  public void setCorpusId(@javax.annotation.Nonnull UUID corpusId) {
     this.corpusId = corpusId;
   }
 

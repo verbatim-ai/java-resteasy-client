@@ -42,25 +42,6 @@ class CorpusApiTest {
     private final CorpusApi api = new CorpusApi();
 
     /**
-     * List corpora
-     *
-     * Paginate corpora belonging to an organization.
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    void callListTest() throws ApiException {
-        //
-        //Integer pageSize = null;
-        //
-        //Integer pageIndex = null;
-        //
-        //CorpusListResponse response = api.callList(pageSize, pageIndex);
-
-        // TODO: test validations
-    }
-    /**
      * Create a corpus
      *
      * Create a new corpus inside an organization. The embedding model and summary LLM are locked at creation time and used for every document ingested afterwards.
@@ -108,6 +89,25 @@ class CorpusApiTest {
         //UUID corpusId = null;
         //
         //CorpusItemResponse response = api.get2(corpusId);
+
+        // TODO: test validations
+    }
+    /**
+     * List corpora
+     *
+     * Paginate corpora belonging to an organization.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    void list1Test() throws ApiException {
+        //
+        //Integer pageSize = null;
+        //
+        //Integer pageIndex = null;
+        //
+        //CorpusListResponse response = api.list1(pageSize, pageIndex);
 
         // TODO: test validations
     }
