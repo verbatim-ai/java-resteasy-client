@@ -45,8 +45,6 @@ public class DocumentPreviewUrl {
   public enum SizeEnum {
     SMALL(String.valueOf("SMALL")),
     
-    MEDIUM(String.valueOf("MEDIUM")),
-    
     LARGE(String.valueOf("LARGE"));
 
     private String value;
