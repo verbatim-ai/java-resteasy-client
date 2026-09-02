@@ -44,7 +44,7 @@ public class CorpusApi {
 
   /**
    * Create a corpus
-   * Create a new corpus inside an organization. The embedding model and summary LLM are locked at creation time and used for every document ingested afterwards.
+   * Create a new corpus inside an organization. The organization is taken from your token, so there is nothing to pass: a corpus needs only a name, and optionally a description and metadata.
    * @param corpusCreateRequest  (required)
    * @return a {@code CorpusCreateResponse}
    * @throws ApiException if fails to make API call
@@ -216,7 +216,7 @@ public class CorpusApi {
       }
   /**
    * Update a corpus
-   * Patch the name, description or metadata of an existing corpus. Only the fields present in the request body are updated; omitted fields keep their current value.  &#x60;metadata&#x60; **replaces** the stored map when provided — merge client-side if you want to preserve existing keys.  Changing models does **not** re-process already-ingested documents. 
+   * Patch the name, description or metadata of an existing corpus. Only the fields present in the request body are updated; omitted fields keep their current value.  &#x60;metadata&#x60; **replaces** the stored map when provided — merge client-side if you want to preserve existing keys.  Nothing patchable here changes how the corpus behaves: retrieval and the models that answer belong to the agent named on each query, so no edit re-processes documents or affects queries already running. 
    * @param corpusId ID of the corpus to update. (required)
    * @param corpusUpdateRequest  (required)
    * @return a {@code CorpusUpdateResponse}

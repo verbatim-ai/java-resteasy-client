@@ -93,12 +93,12 @@ public class PostApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete4(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public AckResponse delete5(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete4");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete5");
     }
     
     // create path and map variables
@@ -181,12 +181,12 @@ public class PostApi {
    * @return a {@code Post}
    * @throws ApiException if fails to make API call
    */
-  public Post get4(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public Post get5(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling get4");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling get5");
     }
     
     // create path and map variables
@@ -220,14 +220,15 @@ public class PostApi {
       }
   /**
    * List posts
-   * Paginate every post (user queries and system answers) in a session, newest first.
+   * Paginate every post of a session — the user questions and the system answers alike, interleaved in the order they were written.  **Ordering.** &#x60;order&#x3D;ASC&#x60; (the default) reads the conversation, natural timestamp (lastest post first). Ordering &#x60;order&#x3D;DESC&#x60; reads the conversation backwards, most recent first, which is what a client polling for what just happened wants: page &#x60;0&#x60; is the latest exchange whatever the session has grown to. &#x60;order&#x3D;ASC&#x60; reads it forwards, oldest first — the transcript order, and the one to walk when rendering a whole conversation from the beginning.  Posts are ordered on &#x60;createdAt&#x60; and the ordering is closed by the post id, so walking &#x60;pageIndex&#x60; never shows the same post twice nor skips one — the two posts of a single exchange are written microseconds apart and can share a timestamp. Note the consequence of that tie: when they do share one, the question and its answer are ordered by id, which is arbitrary. Read &#x60;owner&#x60; rather than position to tell them apart.  **Paging.** &#x60;pageSize&#x60; is 1–100 and defaults to &#x60;25&#x60;; &#x60;pageIndex&#x60; is zero-based. Values outside those bounds are refused with &#x60;400&#x60;. &#x60;total&#x60; carries the number of posts in the session across every page, so a client knows how far it has to walk. Soft-deleted posts are excluded from both the page and the count.  Examples:  * &#x60;?sessionId&#x3D;…&#x60; — the 25 most recent posts of the session, newest first. * &#x60;?sessionId&#x3D;…&amp;order&#x3D;ASC&amp;pageSize&#x3D;50&#x60; — the conversation from its first post,   50 at a time. * &#x60;?sessionId&#x3D;…&amp;pageIndex&#x3D;1&#x60; — the exchange before the latest ones. 
    * @param sessionId ID of the session. (required)
-   * @param pageSize Number of items per page. (optional, default to 25)
+   * @param pageSize Number of items per page, 1-100. (optional, default to 25)
    * @param pageIndex Zero-based page index. (optional, default to 0)
+   * @param order Direction to read the session in: &#x60;DESC&#x60; newest first, &#x60;ASC&#x60; oldest first. Defaults to &#x60;DESC&#x60;. (optional)
    * @return a {@code PostListResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostListResponse list3(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public PostListResponse list3(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex, @javax.annotation.Nullable String order) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'sessionId' is set
@@ -247,6 +248,7 @@ public class PostApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));
 
     
     

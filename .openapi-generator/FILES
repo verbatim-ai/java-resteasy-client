@@ -16,6 +16,10 @@ docs/AgentListResponse.md
 docs/AgentUpdateRequest.md
 docs/Attachment.md
 docs/AuthApi.md
+docs/Chunk.md
+docs/ChunkApi.md
+docs/ChunkListResponse.md
+docs/ChunkUpdateRequest.md
 docs/ConfigurationApi.md
 docs/Corpus.md
 docs/CorpusApi.md
@@ -67,6 +71,7 @@ settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/com/verbatim/client/resteasy/api/AgentApi.java
 src/main/java/com/verbatim/client/resteasy/api/AuthApi.java
+src/main/java/com/verbatim/client/resteasy/api/ChunkApi.java
 src/main/java/com/verbatim/client/resteasy/api/ConfigurationApi.java
 src/main/java/com/verbatim/client/resteasy/api/CorpusApi.java
 src/main/java/com/verbatim/client/resteasy/api/DocumentApi.java
@@ -97,6 +102,9 @@ src/main/java/com/verbatim/client/resteasy/models/AgentCreateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/AgentListResponse.java
 src/main/java/com/verbatim/client/resteasy/models/AgentUpdateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/Attachment.java
+src/main/java/com/verbatim/client/resteasy/models/Chunk.java
+src/main/java/com/verbatim/client/resteasy/models/ChunkListResponse.java
+src/main/java/com/verbatim/client/resteasy/models/ChunkUpdateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/Corpus.java
 src/main/java/com/verbatim/client/resteasy/models/CorpusCreateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/CorpusCreateResponse.java
@@ -133,6 +141,7 @@ src/main/java/com/verbatim/client/resteasy/models/UsageTokens.java
 src/main/java/com/verbatim/client/resteasy/models/WhoAmI.java
 src/test/java/com/verbatim/client/resteasy/api/AgentApiTest.java
 src/test/java/com/verbatim/client/resteasy/api/AuthApiTest.java
+src/test/java/com/verbatim/client/resteasy/api/ChunkApiTest.java
 src/test/java/com/verbatim/client/resteasy/api/ConfigurationApiTest.java
 src/test/java/com/verbatim/client/resteasy/api/CorpusApiTest.java
 src/test/java/com/verbatim/client/resteasy/api/DocumentApiTest.java
@@ -147,6 +156,9 @@ src/test/java/com/verbatim/client/resteasy/models/AgentListResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/AgentTest.java
 src/test/java/com/verbatim/client/resteasy/models/AgentUpdateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/AttachmentTest.java
+src/test/java/com/verbatim/client/resteasy/models/ChunkListResponseTest.java
+src/test/java/com/verbatim/client/resteasy/models/ChunkTest.java
+src/test/java/com/verbatim/client/resteasy/models/ChunkUpdateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusCreateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusCreateResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusItemResponseTest.java
