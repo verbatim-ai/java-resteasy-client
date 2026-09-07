@@ -1,6 +1,6 @@
 /*
  * Verbatim AI — GenAI Backend API
- *   ## Concepts API of the **Verbatim AI** Retrieval-Augmented-Generation (RAG) platform is built over 5 domains: - **Corpus** — a knowledge base. Holds documents, sessions, and is bound to an embedding model and a summary LLM. - **Document** — a file ingested into a corpus (PDF, DOCX, HTML…). - **Chunk** — one embeddable piece of a document, produced by ingestion. The unit retrieval actually returns. - **Session** — a conversation thread bound to one or more corpora. - **Post** — a single user query or system answer inside a session. Answers reference attachments (the chunks used as context).  ## Authentication Two authentication methods are accepted on endpoints:  | Method | Header | Allowed HTTP methods | Use case | |--------|--------|----------------------|----------| | **JWT Bearer** | `Authorization: Bearer <jwt>` | All | Server-to-server calls with your RSA-signed JWT | | **Access Token** | `X-Access-Token: <token>` | **Defined by the scope of the token** | Short-lived tokens issued by `POST /v1/access-token/` |  ## API status Get a fresh status from our [API Status dashboard](https://verbatim-ai.openstatus.dev/). Events, maintenance schedules and incidents will be reported in this page.  ## Conventions - **Pagination** — list endpoints accept `pageSize` (default `25`) and `pageIndex` (default `0`). - **IDs** — all resource identifiers are UUIDv4 strings. - **Timestamps** — ISO-8601 (`2026-04-23T04:06:51Z`). - **Errors** — non-2xx responses return a JSON body matching the `Error` schema. --- 
+ *   ## Concepts API of the **Verbatim AI** Retrieval-Augmented-Generation (RAG) platform is built over 5 domains: - **Corpus** — a knowledge base. Holds documents, threads, and is bound to an embedding model and a summary LLM. - **Document** — a file ingested into a corpus (PDF, DOCX, HTML…). - **Chunk** — one embeddable piece of a document, produced by ingestion. The unit retrieval actually returns. - **Thread** — a conversation thread bound to one or more corpora. - **Post** — a single user query or system answer inside a thread. Answers reference attachments (the chunks used as context).  ## Authentication Two authentication methods are accepted on endpoints:  | Method | Header | Allowed HTTP methods | Use case | |--------|--------|----------------------|----------| | **JWT Bearer** | `Authorization: Bearer <jwt>` | All | Server-to-server calls with your RSA-signed JWT | | **Access Token** | `X-Access-Token: <token>` | **Defined by the scope of the token** | Short-lived tokens issued by `POST /v1/access-token/` |  ## API status Get a fresh status from our [API Status dashboard](https://verbatim-ai.openstatus.dev/). Events, maintenance schedules and incidents will be reported in this page.  ## Conventions - **Pagination** — list endpoints accept `pageSize` (default `25`) and `pageIndex` (default `0`). - **IDs** — all resource identifiers are UUIDv4 strings. - **Timestamps** — ISO-8601 (`2026-04-23T04:06:51Z`). - **Errors** — non-2xx responses return a JSON body matching the `Error` schema. --- 
  *
  * The version of the OpenAPI document: v1
  * Contact: contact@verbatim-ai.com
@@ -50,11 +50,11 @@ class CorpusApiTest {
      *          if the Api call fails
      */
     @Test
-    void create1Test() throws ApiException {
+    void create2Test() throws ApiException {
         //
         //CorpusCreateRequest corpusCreateRequest = null;
         //
-        //CorpusCreateResponse response = api.create1(corpusCreateRequest);
+        //CorpusCreateResponse response = api.create2(corpusCreateRequest);
 
         // TODO: test validations
     }
@@ -67,11 +67,11 @@ class CorpusApiTest {
      *          if the Api call fails
      */
     @Test
-    void delete2Test() throws ApiException {
+    void delete3Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
-        //AckResponse response = api.delete2(corpusId);
+        //AckResponse response = api.delete3(corpusId);
 
         // TODO: test validations
     }
@@ -84,11 +84,11 @@ class CorpusApiTest {
      *          if the Api call fails
      */
     @Test
-    void get2Test() throws ApiException {
+    void get3Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
-        //CorpusItemResponse response = api.get2(corpusId);
+        //CorpusItemResponse response = api.get3(corpusId);
 
         // TODO: test validations
     }
@@ -101,13 +101,13 @@ class CorpusApiTest {
      *          if the Api call fails
      */
     @Test
-    void list1Test() throws ApiException {
+    void list2Test() throws ApiException {
         //
         //Integer pageSize = null;
         //
         //Integer pageIndex = null;
         //
-        //CorpusListResponse response = api.list1(pageSize, pageIndex);
+        //CorpusListResponse response = api.list2(pageSize, pageIndex);
 
         // TODO: test validations
     }
@@ -120,13 +120,13 @@ class CorpusApiTest {
      *          if the Api call fails
      */
     @Test
-    void update2Test() throws ApiException {
+    void update3Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
         //CorpusUpdateRequest corpusUpdateRequest = null;
         //
-        //CorpusUpdateResponse response = api.update2(corpusId, corpusUpdateRequest);
+        //CorpusUpdateResponse response = api.update3(corpusId, corpusUpdateRequest);
 
         // TODO: test validations
     }

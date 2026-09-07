@@ -49,12 +49,12 @@ public class CorpusApi {
    * @return a {@code CorpusCreateResponse}
    * @throws ApiException if fails to make API call
    */
-  public CorpusCreateResponse create1(@javax.annotation.Nonnull CorpusCreateRequest corpusCreateRequest) throws ApiException {
+  public CorpusCreateResponse create2(@javax.annotation.Nonnull CorpusCreateRequest corpusCreateRequest) throws ApiException {
     Object localVarPostBody = corpusCreateRequest;
     
     // verify the required parameter 'corpusCreateRequest' is set
     if (corpusCreateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusCreateRequest' when calling create1");
+      throw new ApiException(400, "Missing the required parameter 'corpusCreateRequest' when calling create2");
     }
     
     // create path and map variables
@@ -92,12 +92,12 @@ public class CorpusApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete2(@javax.annotation.Nonnull UUID corpusId) throws ApiException {
+  public AckResponse delete3(@javax.annotation.Nonnull UUID corpusId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling delete2");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling delete3");
     }
     
     // create path and map variables
@@ -136,12 +136,12 @@ public class CorpusApi {
    * @return a {@code CorpusItemResponse}
    * @throws ApiException if fails to make API call
    */
-  public CorpusItemResponse get2(@javax.annotation.Nonnull UUID corpusId) throws ApiException {
+  public CorpusItemResponse get3(@javax.annotation.Nonnull UUID corpusId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling get2");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling get3");
     }
     
     // create path and map variables
@@ -181,7 +181,7 @@ public class CorpusApi {
    * @return a {@code CorpusListResponse}
    * @throws ApiException if fails to make API call
    */
-  public CorpusListResponse list1(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public CorpusListResponse list2(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -222,17 +222,17 @@ public class CorpusApi {
    * @return a {@code CorpusUpdateResponse}
    * @throws ApiException if fails to make API call
    */
-  public CorpusUpdateResponse update2(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nonnull CorpusUpdateRequest corpusUpdateRequest) throws ApiException {
+  public CorpusUpdateResponse update3(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nonnull CorpusUpdateRequest corpusUpdateRequest) throws ApiException {
     Object localVarPostBody = corpusUpdateRequest;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling update2");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling update3");
     }
     
     // verify the required parameter 'corpusUpdateRequest' is set
     if (corpusUpdateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusUpdateRequest' when calling update2");
+      throw new ApiException(400, "Missing the required parameter 'corpusUpdateRequest' when calling update3");
     }
     
     // create path and map variables

@@ -45,12 +45,12 @@ public class AuthApi {
    * @return a {@code AccessTokenCreateResponse}
    * @throws ApiException if fails to make API call
    */
-  public AccessTokenCreateResponse create2(@javax.annotation.Nonnull AccessTokenCreateRequest accessTokenCreateRequest) throws ApiException {
+  public AccessTokenCreateResponse create3(@javax.annotation.Nonnull AccessTokenCreateRequest accessTokenCreateRequest) throws ApiException {
     Object localVarPostBody = accessTokenCreateRequest;
     
     // verify the required parameter 'accessTokenCreateRequest' is set
     if (accessTokenCreateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'accessTokenCreateRequest' when calling create2");
+      throw new ApiException(400, "Missing the required parameter 'accessTokenCreateRequest' when calling create3");
     }
     
     // create path and map variables

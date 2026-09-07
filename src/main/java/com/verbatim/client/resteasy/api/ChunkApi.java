@@ -46,12 +46,12 @@ public class ChunkApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete3(@javax.annotation.Nonnull UUID chunkId) throws ApiException {
+  public AckResponse delete4(@javax.annotation.Nonnull UUID chunkId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'chunkId' is set
     if (chunkId == null) {
-      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling delete3");
+      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling delete4");
     }
     
     // create path and map variables
@@ -90,12 +90,12 @@ public class ChunkApi {
    * @return a {@code Chunk}
    * @throws ApiException if fails to make API call
    */
-  public Chunk get3(@javax.annotation.Nonnull UUID chunkId) throws ApiException {
+  public Chunk get4(@javax.annotation.Nonnull UUID chunkId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'chunkId' is set
     if (chunkId == null) {
-      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling get3");
+      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling get4");
     }
     
     // create path and map variables
@@ -136,7 +136,7 @@ public class ChunkApi {
    * @return a {@code ChunkListResponse}
    * @throws ApiException if fails to make API call
    */
-  public ChunkListResponse list6(@javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public ChunkListResponse list7(@javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -186,7 +186,7 @@ public class ChunkApi {
    * @return a {@code ChunkListResponse}
    * @throws ApiException if fails to make API call
    */
-  public ChunkListResponse search2(@javax.annotation.Nullable UUID corpusId, @javax.annotation.Nullable UUID documentId, @javax.annotation.Nullable String hash, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable String key, @javax.annotation.Nullable String value, @javax.annotation.Nullable String json, @javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public ChunkListResponse search3(@javax.annotation.Nullable UUID corpusId, @javax.annotation.Nullable UUID documentId, @javax.annotation.Nullable String hash, @javax.annotation.Nullable Integer page, @javax.annotation.Nullable String key, @javax.annotation.Nullable String value, @javax.annotation.Nullable String json, @javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -235,17 +235,17 @@ public class ChunkApi {
    * @return a {@code Chunk}
    * @throws ApiException if fails to make API call
    */
-  public Chunk update3(@javax.annotation.Nonnull UUID chunkId, @javax.annotation.Nonnull ChunkUpdateRequest chunkUpdateRequest) throws ApiException {
+  public Chunk update4(@javax.annotation.Nonnull UUID chunkId, @javax.annotation.Nonnull ChunkUpdateRequest chunkUpdateRequest) throws ApiException {
     Object localVarPostBody = chunkUpdateRequest;
     
     // verify the required parameter 'chunkId' is set
     if (chunkId == null) {
-      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling update3");
+      throw new ApiException(400, "Missing the required parameter 'chunkId' when calling update4");
     }
     
     // verify the required parameter 'chunkUpdateRequest' is set
     if (chunkUpdateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'chunkUpdateRequest' when calling update3");
+      throw new ApiException(400, "Missing the required parameter 'chunkUpdateRequest' when calling update4");
     }
     
     // create path and map variables

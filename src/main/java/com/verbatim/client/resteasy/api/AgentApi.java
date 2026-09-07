@@ -47,12 +47,12 @@ public class AgentApi {
    * @return a {@code Agent}
    * @throws ApiException if fails to make API call
    */
-  public Agent create3(@javax.annotation.Nonnull AgentCreateRequest agentCreateRequest) throws ApiException {
+  public Agent create4(@javax.annotation.Nonnull AgentCreateRequest agentCreateRequest) throws ApiException {
     Object localVarPostBody = agentCreateRequest;
     
     // verify the required parameter 'agentCreateRequest' is set
     if (agentCreateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'agentCreateRequest' when calling create3");
+      throw new ApiException(400, "Missing the required parameter 'agentCreateRequest' when calling create4");
     }
     
     // create path and map variables
@@ -90,12 +90,12 @@ public class AgentApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete4(@javax.annotation.Nonnull UUID agentId) throws ApiException {
+  public AckResponse delete5(@javax.annotation.Nonnull UUID agentId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'agentId' is set
     if (agentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'agentId' when calling delete4");
+      throw new ApiException(400, "Missing the required parameter 'agentId' when calling delete5");
     }
     
     // create path and map variables
@@ -134,12 +134,12 @@ public class AgentApi {
    * @return a {@code Agent}
    * @throws ApiException if fails to make API call
    */
-  public Agent get4(@javax.annotation.Nonnull UUID agentId) throws ApiException {
+  public Agent get5(@javax.annotation.Nonnull UUID agentId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'agentId' is set
     if (agentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'agentId' when calling get4");
+      throw new ApiException(400, "Missing the required parameter 'agentId' when calling get5");
     }
     
     // create path and map variables
@@ -179,7 +179,7 @@ public class AgentApi {
    * @return a {@code AgentListResponse}
    * @throws ApiException if fails to make API call
    */
-  public AgentListResponse list2(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public AgentListResponse list3(@javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -220,17 +220,17 @@ public class AgentApi {
    * @return a {@code Agent}
    * @throws ApiException if fails to make API call
    */
-  public Agent update4(@javax.annotation.Nonnull UUID agentId, @javax.annotation.Nonnull AgentUpdateRequest agentUpdateRequest) throws ApiException {
+  public Agent update5(@javax.annotation.Nonnull UUID agentId, @javax.annotation.Nonnull AgentUpdateRequest agentUpdateRequest) throws ApiException {
     Object localVarPostBody = agentUpdateRequest;
     
     // verify the required parameter 'agentId' is set
     if (agentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'agentId' when calling update4");
+      throw new ApiException(400, "Missing the required parameter 'agentId' when calling update5");
     }
     
     // verify the required parameter 'agentUpdateRequest' is set
     if (agentUpdateRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'agentUpdateRequest' when calling update4");
+      throw new ApiException(400, "Missing the required parameter 'agentUpdateRequest' when calling update5");
     }
     
     // create path and map variables

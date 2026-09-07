@@ -93,12 +93,12 @@ public class PostApi {
    * @return a {@code AckResponse}
    * @throws ApiException if fails to make API call
    */
-  public AckResponse delete5(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public AckResponse delete6(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete5");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling delete6");
     }
     
     // create path and map variables
@@ -181,12 +181,12 @@ public class PostApi {
    * @return a {@code Post}
    * @throws ApiException if fails to make API call
    */
-  public Post get5(@javax.annotation.Nonnull UUID postId) throws ApiException {
+  public Post get6(@javax.annotation.Nonnull UUID postId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'postId' is set
     if (postId == null) {
-      throw new ApiException(400, "Missing the required parameter 'postId' when calling get5");
+      throw new ApiException(400, "Missing the required parameter 'postId' when calling get6");
     }
     
     // create path and map variables
@@ -220,20 +220,21 @@ public class PostApi {
       }
   /**
    * List posts
-   * Paginate every post of a session — the user questions and the system answers alike, interleaved in the order they were written.  **Ordering.** &#x60;order&#x3D;ASC&#x60; (the default) reads the conversation, natural timestamp (lastest post first). Ordering &#x60;order&#x3D;DESC&#x60; reads the conversation backwards, most recent first, which is what a client polling for what just happened wants: page &#x60;0&#x60; is the latest exchange whatever the session has grown to. &#x60;order&#x3D;ASC&#x60; reads it forwards, oldest first — the transcript order, and the one to walk when rendering a whole conversation from the beginning.  Posts are ordered on &#x60;createdAt&#x60; and the ordering is closed by the post id, so walking &#x60;pageIndex&#x60; never shows the same post twice nor skips one — the two posts of a single exchange are written microseconds apart and can share a timestamp. Note the consequence of that tie: when they do share one, the question and its answer are ordered by id, which is arbitrary. Read &#x60;owner&#x60; rather than position to tell them apart.  **Paging.** &#x60;pageSize&#x60; is 1–100 and defaults to &#x60;25&#x60;; &#x60;pageIndex&#x60; is zero-based. Values outside those bounds are refused with &#x60;400&#x60;. &#x60;total&#x60; carries the number of posts in the session across every page, so a client knows how far it has to walk. Soft-deleted posts are excluded from both the page and the count.  Examples:  * &#x60;?sessionId&#x3D;…&#x60; — the 25 most recent posts of the session, newest first. * &#x60;?sessionId&#x3D;…&amp;order&#x3D;ASC&amp;pageSize&#x3D;50&#x60; — the conversation from its first post,   50 at a time. * &#x60;?sessionId&#x3D;…&amp;pageIndex&#x3D;1&#x60; — the exchange before the latest ones. 
-   * @param sessionId ID of the session. (required)
+   * Paginate every post of a thread — the user questions and the system answers alike, interleaved in the order they were written.  **Ordering.** &#x60;order&#x3D;ASC&#x60; (the default) reads the conversation, natural timestamp (lastest post first). Ordering &#x60;order&#x3D;DESC&#x60; reads the conversation backwards, most recent first, which is what a client polling for what just happened wants: page &#x60;0&#x60; is the latest exchange whatever the thread has grown to. &#x60;order&#x3D;ASC&#x60; reads it forwards, oldest first — the transcript order, and the one to walk when rendering a whole conversation from the beginning.  Posts are ordered on &#x60;createdAt&#x60; and the ordering is closed by the post id, so walking &#x60;pageIndex&#x60; never shows the same post twice nor skips one — the two posts of a single exchange are written microseconds apart and can share a timestamp. Note the consequence of that tie: when they do share one, the question and its answer are ordered by id, which is arbitrary. Read &#x60;owner&#x60; rather than position to tell them apart.  **Paging.** &#x60;pageSize&#x60; is 1–100 and defaults to &#x60;25&#x60;; &#x60;pageIndex&#x60; is zero-based. Values outside those bounds are refused with &#x60;400&#x60;. &#x60;total&#x60; carries the number of posts in the thread across every page, so a client knows how far it has to walk. Soft-deleted posts are excluded from both the page and the count.  Examples:  * &#x60;?threadId&#x3D;…&#x60; — the 25 most recent posts of the thread, newest first. * &#x60;?threadId&#x3D;…&amp;order&#x3D;ASC&amp;pageSize&#x3D;50&#x60; — the conversation from its first post,   50 at a time. * &#x60;?threadId&#x3D;…&amp;pageIndex&#x3D;1&#x60; — the exchange before the latest ones. 
+   * @param threadId ID of the thread. (required)
+   * @param sessionId  (optional)
    * @param pageSize Number of items per page, 1-100. (optional, default to 25)
    * @param pageIndex Zero-based page index. (optional, default to 0)
-   * @param order Direction to read the session in: &#x60;DESC&#x60; newest first, &#x60;ASC&#x60; oldest first. Defaults to &#x60;DESC&#x60;. (optional)
+   * @param order Direction to read the thread in: &#x60;DESC&#x60; newest first, &#x60;ASC&#x60; oldest first. Defaults to &#x60;DESC&#x60;. (optional)
    * @return a {@code PostListResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostListResponse list3(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex, @javax.annotation.Nullable String order) throws ApiException {
+  public PostListResponse list4(@javax.annotation.Nonnull UUID threadId, @javax.annotation.Nullable UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex, @javax.annotation.Nullable String order) throws ApiException {
     Object localVarPostBody = null;
     
-    // verify the required parameter 'sessionId' is set
-    if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling list3");
+    // verify the required parameter 'threadId' is set
+    if (threadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'threadId' when calling list4");
     }
     
     // create path and map variables
@@ -246,6 +247,7 @@ public class PostApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "threadId", threadId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageSize", pageSize));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "pageIndex", pageIndex));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));
@@ -321,20 +323,21 @@ public class PostApi {
       }
   /**
    * Send a query
-   * Submit a user message to a session and run the full RAG pipeline:  1. Persist the query as a post with &#x60;owner &#x3D; USER&#x60;. 2. Vectorize the query and run a cosine-similarity search against the session&#39;s corpora. 3. Feed the top chunks to the session&#39;s LLM as context. 4. Persist the answer as a post with &#x60;owner &#x3D; SYSTEM&#x60;, with attachments pointing to the chunks used.  The response contains both the user post (&#x60;query&#x60;) and the system post (&#x60;answer&#x60;).  ### Choosing an agent  How much of that pipeline runs, and how, is decided by an **agent** — retrieval width, whether the chunks are re-ranked, the system instruction, how much of the conversation is replayed, and which model answers. See &#x60;GET /v1/agent/&#x60;.  Omit &#x60;agentId&#x60; and the query runs on the platform default agent, which is what every query did before agents existed. Pass one to run this single query under a different setup:  &#x60;&#x60;&#x60; GET /v1/post/q?sessionId&#x3D;$SESSION_ID&amp;body&#x3D;What+is+the+refund+policy%3F&amp;agentId&#x3D;$AGENT_ID &#x60;&#x60;&#x60;  The choice is **per query, not per session** — the next query on the same session is independent, so a client can escalate one question to a wider, slower agent without changing the conversation it belongs to.  The agent is then recorded on the answer as &#x60;agentId&#x60;, and only on the answer: the user&#39;s question is not something an agent produced. A missing &#x60;agentId&#x60; on an answer therefore means \&quot;ran on the default agent\&quot;, not \&quot;unknown\&quot;. Deleting an agent does not rewrite the answers it produced, so this still names an agent you have since deleted — resolving that id through &#x60;GET /v1/agent/{agentId}&#x60; answers &#x60;404&#x60;, which is the honest reading.  An &#x60;agentId&#x60; your organization cannot see — someone else&#39;s, or one that never existed — answers &#x60;404&#x60; and no post is written. 
-   * @param sessionId ID of the session to post the query into. (required)
+   * Submit a user message to a thread and run the full RAG pipeline:  1. Persist the query as a post with &#x60;owner &#x3D; USER&#x60;. 2. Vectorize the query and run a cosine-similarity search against the thread&#39;s corpora. 3. Feed the top chunks to the thread&#39;s LLM as context. 4. Persist the answer as a post with &#x60;owner &#x3D; SYSTEM&#x60;, with attachments pointing to the chunks used.  The response contains both the user post (&#x60;query&#x60;) and the system post (&#x60;answer&#x60;).  ### Choosing an agent  How much of that pipeline runs, and how, is decided by an **agent** — retrieval width, whether the chunks are re-ranked, the system instruction, how much of the conversation is replayed, and which model answers. See &#x60;GET /v1/agent/&#x60;.  Omit &#x60;agentId&#x60; and the query runs on the platform default agent, which is what every query did before agents existed. Pass one to run this single query under a different setup:  &#x60;&#x60;&#x60; GET /v1/post/q?threadId&#x3D;$THREAD_ID&amp;body&#x3D;What+is+the+refund+policy%3F&amp;agentId&#x3D;$AGENT_ID &#x60;&#x60;&#x60;  The choice is **per query, not per thread** — the next query on the same thread is independent, so a client can escalate one question to a wider, slower agent without changing the conversation it belongs to.  The agent is then recorded on the answer as &#x60;agentId&#x60;, and only on the answer: the user&#39;s question is not something an agent produced. A missing &#x60;agentId&#x60; on an answer therefore means \&quot;ran on the default agent\&quot;, not \&quot;unknown\&quot;. Deleting an agent does not rewrite the answers it produced, so this still names an agent you have since deleted — resolving that id through &#x60;GET /v1/agent/{agentId}&#x60; answers &#x60;404&#x60;, which is the honest reading.  An &#x60;agentId&#x60; your organization cannot see — someone else&#39;s, or one that never existed — answers &#x60;404&#x60; and no post is written. 
+   * @param threadId ID of the thread to post the query into. (required)
    * @param body User message to send to the LLM. (required)
+   * @param sessionId  (optional)
    * @param lang ISO-639 language code used by the LLM. Defaults to &#x60;en&#x60;. (optional)
    * @param agentId Agent to run this query under. Omit to use the platform default agent. Must be one of the agents &#x60;GET /v1/agent/&#x60; lists for your organization. (optional)
    * @return a {@code PostItemResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostItemResponse query(@javax.annotation.Nonnull UUID sessionId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
+  public PostItemResponse query(@javax.annotation.Nonnull UUID threadId, @javax.annotation.Nonnull String body, @javax.annotation.Nullable UUID sessionId, @javax.annotation.Nullable String lang, @javax.annotation.Nullable UUID agentId) throws ApiException {
     Object localVarPostBody = null;
     
-    // verify the required parameter 'sessionId' is set
-    if (sessionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'sessionId' when calling query");
+    // verify the required parameter 'threadId' is set
+    if (threadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'threadId' when calling query");
     }
     
     // verify the required parameter 'body' is set
@@ -352,6 +355,7 @@ public class PostApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "sessionId", sessionId));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "threadId", threadId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "body", body));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "lang", lang));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "agentId", agentId));
