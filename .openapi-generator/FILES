@@ -31,6 +31,7 @@ docs/CorpusUpdateRequest.md
 docs/CorpusUpdateResponse.md
 docs/Document.md
 docs/DocumentApi.md
+docs/DocumentConvertResponse.md
 docs/DocumentDownloadUrl.md
 docs/DocumentInit.md
 docs/DocumentInitRequest.md
@@ -114,6 +115,7 @@ src/main/java/com/verbatim/client/resteasy/models/CorpusListResponse.java
 src/main/java/com/verbatim/client/resteasy/models/CorpusUpdateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/CorpusUpdateResponse.java
 src/main/java/com/verbatim/client/resteasy/models/Document.java
+src/main/java/com/verbatim/client/resteasy/models/DocumentConvertResponse.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentDownloadUrl.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentInit.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentInitRequest.java
@@ -168,6 +170,7 @@ src/test/java/com/verbatim/client/resteasy/models/CorpusListResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusUpdateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/CorpusUpdateResponseTest.java
+src/test/java/com/verbatim/client/resteasy/models/DocumentConvertResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentDownloadUrlTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentInitRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentInitTest.java
