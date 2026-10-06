@@ -323,12 +323,12 @@ public class DocumentApi {
    * @return a {@code DocumentListResponse}
    * @throws ApiException if fails to make API call
    */
-  public DocumentListResponse list5(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String status, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public DocumentListResponse list6(@javax.annotation.Nonnull UUID corpusId, @javax.annotation.Nullable String status, @javax.annotation.Nullable List<String> tags, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'corpusId' is set
     if (corpusId == null) {
-      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list5");
+      throw new ApiException(400, "Missing the required parameter 'corpusId' when calling list6");
     }
     
     // create path and map variables

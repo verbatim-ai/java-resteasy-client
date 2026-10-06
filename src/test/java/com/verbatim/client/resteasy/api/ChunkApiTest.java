@@ -81,7 +81,7 @@ class ChunkApiTest {
      *          if the Api call fails
      */
     @Test
-    void list7Test() throws ApiException {
+    void list8Test() throws ApiException {
         //
         //Boolean body = null;
         //
@@ -89,7 +89,7 @@ class ChunkApiTest {
         //
         //Integer pageIndex = null;
         //
-        //ChunkListResponse response = api.list7(body, pageSize, pageIndex);
+        //ChunkListResponse response = api.list8(body, pageSize, pageIndex);
 
         // TODO: test validations
     }

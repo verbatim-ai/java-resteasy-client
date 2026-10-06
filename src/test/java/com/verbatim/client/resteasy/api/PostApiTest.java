@@ -118,7 +118,7 @@ class PostApiTest {
      *          if the Api call fails
      */
     @Test
-    void list4Test() throws ApiException {
+    void list5Test() throws ApiException {
         //
         //UUID threadId = null;
         //
@@ -130,7 +130,7 @@ class PostApiTest {
         //
         //String order = null;
         //
-        //PostListResponse response = api.list4(threadId, sessionId, pageSize, pageIndex, order);
+        //PostListResponse response = api.list5(threadId, sessionId, pageSize, pageIndex, order);
 
         // TODO: test validations
     }

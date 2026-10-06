@@ -160,7 +160,7 @@ class DocumentApiTest {
      *          if the Api call fails
      */
     @Test
-    void list5Test() throws ApiException {
+    void list6Test() throws ApiException {
         //
         //UUID corpusId = null;
         //
@@ -172,7 +172,7 @@ class DocumentApiTest {
         //
         //Integer pageIndex = null;
         //
-        //DocumentListResponse response = api.list5(corpusId, status, tags, pageSize, pageIndex);
+        //DocumentListResponse response = api.list6(corpusId, status, tags, pageSize, pageIndex);
 
         // TODO: test validations
     }

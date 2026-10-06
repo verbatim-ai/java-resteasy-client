@@ -8,6 +8,11 @@ build.gradle
 build.sbt
 docs/AccessTokenCreateRequest.md
 docs/AccessTokenCreateResponse.md
+docs/AccessTokenItem.md
+docs/AccessTokenListResponse.md
+docs/AccessTokenScopeAction.md
+docs/AccessTokenScopeDomain.md
+docs/AccessTokenScopesResponse.md
 docs/AckResponse.md
 docs/Agent.md
 docs/AgentApi.md
@@ -98,6 +103,11 @@ src/main/java/com/verbatim/client/resteasy/invoker/auth/HttpBasicAuth.java
 src/main/java/com/verbatim/client/resteasy/invoker/auth/HttpBearerAuth.java
 src/main/java/com/verbatim/client/resteasy/models/AccessTokenCreateRequest.java
 src/main/java/com/verbatim/client/resteasy/models/AccessTokenCreateResponse.java
+src/main/java/com/verbatim/client/resteasy/models/AccessTokenItem.java
+src/main/java/com/verbatim/client/resteasy/models/AccessTokenListResponse.java
+src/main/java/com/verbatim/client/resteasy/models/AccessTokenScopeAction.java
+src/main/java/com/verbatim/client/resteasy/models/AccessTokenScopeDomain.java
+src/main/java/com/verbatim/client/resteasy/models/AccessTokenScopesResponse.java
 src/main/java/com/verbatim/client/resteasy/models/AckResponse.java
 src/main/java/com/verbatim/client/resteasy/models/Agent.java
 src/main/java/com/verbatim/client/resteasy/models/AgentCreateRequest.java
@@ -154,6 +164,11 @@ src/test/java/com/verbatim/client/resteasy/api/ThreadApiTest.java
 src/test/java/com/verbatim/client/resteasy/api/UsageApiTest.java
 src/test/java/com/verbatim/client/resteasy/models/AccessTokenCreateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/AccessTokenCreateResponseTest.java
+src/test/java/com/verbatim/client/resteasy/models/AccessTokenItemTest.java
+src/test/java/com/verbatim/client/resteasy/models/AccessTokenListResponseTest.java
+src/test/java/com/verbatim/client/resteasy/models/AccessTokenScopeActionTest.java
+src/test/java/com/verbatim/client/resteasy/models/AccessTokenScopeDomainTest.java
+src/test/java/com/verbatim/client/resteasy/models/AccessTokenScopesResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/AckResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/AgentCreateRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/AgentListResponseTest.java

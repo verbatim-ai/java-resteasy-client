@@ -136,7 +136,7 @@ public class ChunkApi {
    * @return a {@code ChunkListResponse}
    * @throws ApiException if fails to make API call
    */
-  public ChunkListResponse list7(@javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
+  public ChunkListResponse list8(@javax.annotation.Nullable Boolean body, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables

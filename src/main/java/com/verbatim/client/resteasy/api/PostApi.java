@@ -229,12 +229,12 @@ public class PostApi {
    * @return a {@code PostListResponse}
    * @throws ApiException if fails to make API call
    */
-  public PostListResponse list4(@javax.annotation.Nonnull UUID threadId, @javax.annotation.Nullable UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex, @javax.annotation.Nullable String order) throws ApiException {
+  public PostListResponse list5(@javax.annotation.Nonnull UUID threadId, @javax.annotation.Nullable UUID sessionId, @javax.annotation.Nullable Integer pageSize, @javax.annotation.Nullable Integer pageIndex, @javax.annotation.Nullable String order) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'threadId' is set
     if (threadId == null) {
-      throw new ApiException(400, "Missing the required parameter 'threadId' when calling list4");
+      throw new ApiException(400, "Missing the required parameter 'threadId' when calling list5");
     }
     
     // create path and map variables
