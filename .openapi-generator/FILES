@@ -46,6 +46,7 @@ docs/DocumentPreviewUrls.md
 docs/DocumentSearchResponse.md
 docs/DocumentStatus.md
 docs/DocumentUpdateRequest.md
+docs/DocumentUrlRequest.md
 docs/Error.md
 docs/Model.md
 docs/ModelListResponse.md
@@ -135,6 +136,7 @@ src/main/java/com/verbatim/client/resteasy/models/DocumentPreviewUrls.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentSearchResponse.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentStatus.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentUpdateRequest.java
+src/main/java/com/verbatim/client/resteasy/models/DocumentUrlRequest.java
 src/main/java/com/verbatim/client/resteasy/models/Error.java
 src/main/java/com/verbatim/client/resteasy/models/Model.java
 src/main/java/com/verbatim/client/resteasy/models/ModelListResponse.java
@@ -196,6 +198,7 @@ src/test/java/com/verbatim/client/resteasy/models/DocumentSearchResponseTest.jav
 src/test/java/com/verbatim/client/resteasy/models/DocumentStatusTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentUpdateRequestTest.java
+src/test/java/com/verbatim/client/resteasy/models/DocumentUrlRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/ErrorTest.java
 src/test/java/com/verbatim/client/resteasy/models/ModelListResponseTest.java
 src/test/java/com/verbatim/client/resteasy/models/ModelTest.java
