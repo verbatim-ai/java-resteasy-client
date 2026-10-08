@@ -41,6 +41,7 @@ docs/DocumentDownloadUrl.md
 docs/DocumentInit.md
 docs/DocumentInitRequest.md
 docs/DocumentListResponse.md
+docs/DocumentMarkdownUrl.md
 docs/DocumentPreviewUrl.md
 docs/DocumentPreviewUrls.md
 docs/DocumentSearchResponse.md
@@ -131,6 +132,7 @@ src/main/java/com/verbatim/client/resteasy/models/DocumentDownloadUrl.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentInit.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentInitRequest.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentListResponse.java
+src/main/java/com/verbatim/client/resteasy/models/DocumentMarkdownUrl.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentPreviewUrl.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentPreviewUrls.java
 src/main/java/com/verbatim/client/resteasy/models/DocumentSearchResponse.java
@@ -192,6 +194,7 @@ src/test/java/com/verbatim/client/resteasy/models/DocumentDownloadUrlTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentInitRequestTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentInitTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentListResponseTest.java
+src/test/java/com/verbatim/client/resteasy/models/DocumentMarkdownUrlTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentPreviewUrlTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentPreviewUrlsTest.java
 src/test/java/com/verbatim/client/resteasy/models/DocumentSearchResponseTest.java

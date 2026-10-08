@@ -14,6 +14,7 @@ import com.verbatim.client.resteasy.models.DocumentDownloadUrl;
 import com.verbatim.client.resteasy.models.DocumentInit;
 import com.verbatim.client.resteasy.models.DocumentInitRequest;
 import com.verbatim.client.resteasy.models.DocumentListResponse;
+import com.verbatim.client.resteasy.models.DocumentMarkdownUrl;
 import com.verbatim.client.resteasy.models.DocumentPreviewUrls;
 import com.verbatim.client.resteasy.models.DocumentSearchResponse;
 import com.verbatim.client.resteasy.models.DocumentStatus;
@@ -443,6 +444,50 @@ public class DocumentApi {
     String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
 
     GenericType<String> localVarReturnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * Get a presigned URL to the Markdown conversion
+   * Return a time-limited presigned URL the client can use to GET the Markdown conversion of the document directly from the storage backend (S3) — no content flows through this server. It is the text ingestion extracted from the file, before it was split into chunks: what to read when you want the whole document as text.  The URL needs no token: whoever holds it can read the file until &#x60;expiresAt&#x60;. Do not log it or hand it further than needed. Ask again for a fresh one once it has expired. &#x60;timestamp&#x60; is when it was issued.  The conversion is produced during ingestion. No existence check is made here, so the URL answers &#x60;404&#x60; when fetched until ingestion has written it — it is there once the document is &#x60;READY&#x60;. A document still &#x60;AWAITING_UPLOAD&#x60; has nothing to convert and is answered &#x60;409&#x60;.  Scope: &#x60;doc:read&#x60;. 
+   * @param id ID of the document. (required)
+   * @return a {@code DocumentMarkdownUrl}
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentMarkdownUrl markdownUrl(@javax.annotation.Nonnull UUID id) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+      throw new ApiException(400, "Missing the required parameter 'id' when calling markdownUrl");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v1/doc/{id}/md".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "JWT", "AccessToken" };
+
+    GenericType<DocumentMarkdownUrl> localVarReturnType = new GenericType<DocumentMarkdownUrl>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
